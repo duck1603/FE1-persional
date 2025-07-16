@@ -1,0 +1,47 @@
+<!-- Interpolation ({{ }}) : Hiển thị dữ liệu từ component -->
+<!-- <h1>{{ title }}</h1> -->
+
+<!-- Property Binding ([]) : Gán giá trị vào thuộc tính HTML -->
+<!-- <div [ngClass]="{ available: isAvailable }">
+  Status: {{ isAvailable ? "Available" : "Unavailable" }}
+</div> -->
+
+<!-- Event Binding (()) : Xử lý sự kiện người dùng -->
+<!-- <div><button (click)="handleClick()">Click me</button></div> -->
+
+<!-- Two-way Binding ([()]) : Đồng bộ dữ liệu 2 chiều -->
+<!-- <div>
+  <input [(ngModel)]="productName" type="text" placeholder="Product name" />
+  <p>Product Name: {{ productName }}</p>
+</div> -->
+
+<!-- ngIf -->
+<!-- <div *ngIf="products.length > 0; else noProducts"> -->
+<!-- ngFor -->
+<!-- <ul>
+    <li *ngFor="let item of products">
+      <p>Sản phẩm có id là: {{ item.id }}</p>
+      <p>Tên sản phẩm là: {{ item.name }}</p>
+      <p>Giá sản phẩm là: {{ item.price }}</p>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noProducts>
+  <p>No products available.</p>
+</ng-template> -->
+<div class="product-list">
+  <h2>Danh sách sản phẩm</h2>
+
+  <div *ngIf="products.length > 0; else noProducts" class="product-grid">
+    <div *ngFor="let item of products" class="product-card">
+      <img [src]="item.image" [alt]="item.name" />
+      <h3>{{ item.name }}</h3>
+      <p>Giá: {{ item.price | number }} VND</p>
+    </div>
+  </div>
+
+  <ng-template #noProducts>
+    <p>Không có sản phẩm nào.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,26 @@
+<h2>Product List</h2>
+<div *ngIf="products.length > 0; else noProducts">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of products">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td [ngStyle]="{ color: item.inStock ? 'green' : 'red' }">
+          {{ item.inStock ? "In Stock" : "Out of Stock" }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noProducts>
+  <p>No products match the filter.</p>
+</ng-template>
