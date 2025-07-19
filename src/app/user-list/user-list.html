@@ -1,1 +1,27 @@
 <h2>User List</h2>
+<div *ngIf="users.length > 0; else noProducts">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ u.email }}</td>
+        <td>
+          <button class="btn btn-warning">Sửa</button>
+          <button class="btn btn-danger">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noProducts>
+  <p>No products match the filter</p>
+</ng-template>
