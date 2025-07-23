@@ -4,6 +4,7 @@ import { CategoryList } from './category-list/category-list';
 import { UserList } from './user-list/user-list';
 import { Lession } from './lession/lession';
 import { BrandList } from './brand-list/brand-list';
+import { ProductCreate } from './product-create/product-create';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,10 @@ export const routes: Routes = [
   {
     path: 'products',
     component: ProductList,
+  },
+  {
+    path: 'products/create',
+    component: ProductCreate,
   },
   {
     path: 'users',

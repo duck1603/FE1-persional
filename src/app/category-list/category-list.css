@@ -1,6 +1,12 @@
+h2 {
+  text-align: center;
+  margin-top: 15px 0;
+}
+
 td {
   border: 1px solid #ccc;
 }
+
 button {
   margin: 0 5px;
 }
