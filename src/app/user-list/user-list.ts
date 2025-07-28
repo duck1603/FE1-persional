@@ -18,7 +18,7 @@ export class UserList {
     {
       id: 2,
       name: 'quynhhv',
-      email: 'ducnm@zhost.vn',
+      email: 'quynhhv@zhost.vn',
     },
     {
       id: 3,
@@ -31,4 +31,12 @@ export class UserList {
       email: 'thulta@zhost.vn',
     },
   ];
+
+  filterText = '';
+
+  filterUser() {
+    return this.users.filter((user) =>
+      user.email.toLowerCase().includes(this.filterText.toLowerCase())
+    );
+  }
 }

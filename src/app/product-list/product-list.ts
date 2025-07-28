@@ -26,10 +26,18 @@ export class ProductList {
     },
     {
       id: 1,
-      name: 'Giày Nike Air Max',
+      name: 'Giày Nike',
       price: 1100000,
       image: 'https://picsum.photos/seed/nike/400/300',
       inStock: true,
     },
   ];
+
+  filterText = '';
+
+  filterProducts() {
+    return this.products.filter((product) =>
+      product.name.toLowerCase().includes(this.filterText.toLowerCase())
+    );
+  }
 }

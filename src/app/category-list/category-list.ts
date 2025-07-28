@@ -31,4 +31,12 @@ export class CategoryList {
       name: 'Platform sneakers',
     },
   ];
+
+  filterText = '';
+
+  filterCategories() {
+    return this.categories.filter((category) =>
+      category.name.toLowerCase().includes(this.filterText.toLowerCase())
+    );
+  }
 }

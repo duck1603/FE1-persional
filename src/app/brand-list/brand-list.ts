@@ -27,4 +27,12 @@ export class BrandList {
       name: 'Vans',
     },
   ];
+
+  filterText = '';
+
+  filterBrands() {
+    return this.brands.filter((brand) =>
+      brand.name.toLowerCase().includes(this.filterText.toLowerCase())
+    );
+  }
 }
