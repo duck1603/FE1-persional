@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
@@ -25,7 +26,7 @@ export class ProductList {
       inStock: false,
     },
     {
-      id: 1,
+      id: 3,
       name: 'Giày Nike',
       price: 1100000,
       image: 'https://picsum.photos/seed/nike/400/300',

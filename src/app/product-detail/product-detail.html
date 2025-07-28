@@ -1,1 +1,18 @@
-<div class="product-card"></div>
+<h2>Product Id: {{ productId }}</h2>
+<div class="card" style="width: 22rem; margin: auto">
+  <img [src]="product.image" [alt]="product.name" class="card-img-top" />
+  <div class="card-body text-center">
+    <h6 class="card-subtitle mb-2 text-muted">{{ product.name }}</h6>
+    <p class="card-text">
+      <span
+        *ngIf="product.inStock; else outOfStock"
+        class="text-success fw-bold"
+      >
+        Trạng thái: Còn hàng
+      </span>
+    </p>
+    <ng-template #outOfStock>
+      <p class="text-danger fw-bold">Trạng thái: Hết hàng</p>
+    </ng-template>
+  </div>
+</div>
