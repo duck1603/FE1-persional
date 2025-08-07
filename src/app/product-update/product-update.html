@@ -1,0 +1,19 @@
+<h2>Product Update</h2>
+<form [formGroup]="productForm">
+  <div class="mb-3">
+    <label for="title" class="form-label">Product Title</label>
+    <input type="text" class="form-control" formControlName="title" />
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">Product Image</label>
+    <input class="form-control" formControlName="image" />
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">Product Price</label>
+    <input class="form-control" formControlName="price" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

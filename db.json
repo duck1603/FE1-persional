@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Giày Nike Air Max",
+      "price": 2200000,
+      "image": "https://picsum.photos/seed/nike/400/300",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Giày Adidas UltraBoost",
+      "price": 2500000,
+      "image": "https://picsum.photos/seed/nike/400/300",
+      "inStock": false
+    },
+    {
+      "id": 3,
+      "name": "Giày Nike",
+      "price": 1100000,
+      "image": "https://picsum.photos/seed/nike/400/300",
+      "inStock": true
+    }
+  ]
+}

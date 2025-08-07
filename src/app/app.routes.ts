@@ -6,6 +6,7 @@ import { Lession } from './lession/lession';
 import { BrandList } from './brand-list/brand-list';
 import { ProductCreate } from './product-create/product-create';
 import { ProductDetail } from './product-detail/product-detail';
+import { ProductUpdate } from './product-update/product-update';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,10 @@ export const routes: Routes = [
   {
     path: 'product/:id/detail',
     component: ProductDetail,
+  },
+  {
+    path: 'products/update/:id',
+    component: ProductUpdate,
   },
   {
     path: 'products/create',
